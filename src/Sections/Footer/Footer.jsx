@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className={`flex justify-center gap-10 items-center py-6 ${iconColor} ${bgColor}`}>
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/shubham-c01"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-70 transition hover:text-red-500"
@@ -18,7 +18,7 @@ function Footer() {
         <Github size={28} />
       </a>
       <a
-        href="https://linkedin.com/in/yourprofile"
+        href="https://www.linkedin.com/in/shubham-chauhan-35b603376/"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:text-blue-500 transition"
@@ -26,7 +26,7 @@ function Footer() {
         <Linkedin size={28} />
       </a>
       <a
-        href="https://instagram.com/yourusername"
+        href="https://www.instagram.com/shxbhmm_/"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:text-pink-500 transition"
