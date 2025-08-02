@@ -22,11 +22,13 @@ export const Contact = ({ contactprop }) => {
 
   return (
     <div
+    
       ref={contactprop}
       className={`min-h-screen flex justify-center items-center px-4 py-10 transition-all duration-300 ${
-        theme === 'dark' ? 'bg-[#242424]' : 'bg-white'
+        theme === 'dark' ? 'bg-[#242424]' : 'bg-[#f9f9f9]'
       }`}
     >
+      
       <motion.div
         className={`w-full max-w-md rounded-md p-6 shadow text-center transition-colors duration-300 ${
           theme === 'dark' ? 'bg-white/20 text-white' : 'bg-black/10 text-black'
@@ -36,7 +38,8 @@ export const Contact = ({ contactprop }) => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <p className="text-2xl font-bold mb-4">Contact Me</p>
+
+        <p className="text-2xl font-bold mb-4">Fill the form </p>
         <form>
           <label className="block text-left text-base mb-1">Name:</label>
           <input
@@ -68,7 +71,7 @@ export const Contact = ({ contactprop }) => {
           <button
             type="submit"
             onClick={handlesend}
-            className={`rounded-md px-5 py-2 transition w-full font-semibold ${
+            className={`rounded-md px-5 py-2 transition w-full font-semibold hover:cursor-pointer  ${
               theme === 'dark'
                 ? 'bg-white text-black hover:bg-black hover:text-white'
                 : 'bg-black text-white hover:bg-white hover:text-black'

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import background from '/background.jpeg';
 import { useTheme } from '../../Context/ThemeContext';
-export const Mainpage = ({ Getstartedprop, Contactprop }) => {
+export const Mainpage = ({ Getstartedprop, Contactprop,projectprop }) => {
     const {DarkTheme,LightTheme,theme}=useTheme()
     const handlechange=(e)=>{
       const isLight=e.target.checked
@@ -34,26 +34,26 @@ export const Mainpage = ({ Getstartedprop, Contactprop }) => {
       />
 
       {/* Navigation */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-30 flex flex-wrap gap-6 px-4">
+<div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-30 flex flex-wrap sm:flex-nowrap gap-4 sm:gap-6 px-2 sm:px-4 max-w-full justify-center">
         <button
           onClick={Getstartedprop}
-          className="text-base sm:text-xl text-white hover:text-white/80 font-semibold"
+          className="text-base sm:text-xl text-white hover:text-white/80 font-semibold cursor-pointer"
         >
           About
         </button>
         <button
-          onClick={Getstartedprop}
-          className="text-base sm:text-xl text-white hover:text-white/80 font-semibold"
+          onClick={projectprop}
+          className="text-base sm:text-xl text-white hover:text-white/80 font-semibold cursor-pointer"
         >
           Projects
         </button>
         <button
           onClick={Contactprop}
-          className="text-base sm:text-xl text-white hover:text-white/80 font-semibold"
+          className="text-base sm:text-xl text-white hover:text-white/80 font-semibold cursor-pointer"
         >
           Contact
         </button>
-      </div>
+    </div>
 
       {/* Toggle Button */}
       <div className="absolute top-4 right-4 z-30">

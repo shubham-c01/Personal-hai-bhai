@@ -1,15 +1,40 @@
-// import React from 'react'
+import React from 'react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
+import { useTheme } from '../../Context/ThemeContext';
 
-// function Footer() {
-//   return (
-    
-//       <div className='flex bottom-0 gap-5 fixed w-full justify-center bg-gray-400'>
-//         <h1>hello world</h1>
-//         <h3>hellooo</h3>
-//       </div>
+function Footer() {
+  const { theme } = useTheme();
+  const iconColor = theme === 'light' ? 'text-black' : 'text-white';
+  const bgColor = theme === 'light' ? 'bg-[#f9f9f9]' : 'bg-[#242424]';
 
-  
-//   )
-// }
+  return (
+    <div className={`flex justify-center gap-10 items-center py-6 ${iconColor} ${bgColor}`}>
+      <a
+        href="https://github.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:opacity-70 transition hover:text-red-500"
+      >
+        <Github size={28} />
+      </a>
+      <a
+        href="https://linkedin.com/in/yourprofile"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-blue-500 transition"
+      >
+        <Linkedin size={28} />
+      </a>
+      <a
+        href="https://instagram.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-pink-500 transition"
+      >
+        <Instagram size={28} />
+      </a>
+    </div>
+  );
+}
 
-// export default Footer
+export default Footer;
